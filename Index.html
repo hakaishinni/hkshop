@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Paleta de Cores: Preto (#0a0a0a), Cinza Escuro (#1a1a1a) e Dourado (#D4AF37) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Cartão do Produto */
+        .product-card {
+            background-color: #121212;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid #2a2a2a;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+        }
+
+        .badge {
+            background-color: rgba(212, 175, 55, 0.1);
+            color: #D4AF37;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #D4AF37;
+            margin-bottom: 5px;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .description {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .features li {
+            font-size: 0.9rem;
+            color: #ddd;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Ícone de check dourado simples feito com CSS */
+        .features li::before {
+            content: '✓';
+            color: #D4AF37;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Botão de Pagamento */
+        .pay-btn {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA8529 100%);
+            color: #000000;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .pay-btn:hover {
+            background: linear-gradient(135deg, #F3C943 0%, #C49A2F 100%);
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .payment-methods {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-card">
+        <div class="badge">Acesso Imediato</div>
+        <h1 class="title">Assinatura Premium</h1>
+        
+        <div class="price">
+            R$ 25,00 <span>/mensal</span>
+        </div>
+        
+        <p class="description">
+            Tenha acesso completo e ininterrupto. O login e senha serão entregues automaticamente após a confirmação.
+        </p>
+
+        <ul class="features">
+            <li>Acesso instantâneo</li>
+            <li>Suporte prioritário</li>
+            <li>Renovação automática segura</li>
+        </ul>
+
+        <button class="pay-btn" id="btnPagamento">Pagamento</button>
+
+        <div class="payment-methods">
+            Aceitamos Cartão, Pix e Boleto
+        </div>
+    </div>
+
+    <script>
+        // Lógica de redirecionamento para a InfinitePay
+        document.getElementById('btnPagamento').addEventListener('click', function() {
+            // O botão muda de texto para mostrar que está carregando
+            this.innerText = "Processando...";
+            this.style.opacity = "0.8";
+
+            // Link da sua fatura InfinitePay
+            const linkCheckout = "https://invoice.infinitepay.io/plans/isaac-newton-004/FYx6kGjE4c";
+            
+            // Redireciona o usuário após um breve delay (dá uma sensação de carregamento do sistema)
+            setTimeout(() => {
+                window.location.href = linkCheckout;
+            }, 500);
+        });
+    </script>
+
+</body>
+</html>
