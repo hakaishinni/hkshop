@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Premium</title>
+    <title>Loja Premium | O Melhor Preço</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
-        /* Paleta de Cores: Preto (#0a0a0a), Cinza Escuro (#1a1a1a) e Dourado (#D4AF37) */
+        /* Estilos Globais e Paleta Preta e Dourada */
         * {
             margin: 0;
             padding: 0;
@@ -18,24 +18,47 @@
         body {
             background-color: #050505;
             color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
-        /* Cartão do Produto */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            color: #D4AF37;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            color: #aaa;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        /* Grid de Produtos */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .product-card {
             background-color: #121212;
-            width: 100%;
-            max-width: 400px;
             border-radius: 16px;
-            padding: 40px 30px;
+            padding: 30px;
             text-align: center;
             border: 1px solid #2a2a2a;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .product-card:hover {
@@ -44,31 +67,18 @@
             box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
         }
 
-        .badge {
-            background-color: rgba(212, 175, 55, 0.1);
-            color: #D4AF37;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
         .title {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: #ffffff;
         }
 
         .price {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 800;
             color: #D4AF37;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
         }
 
         .price span {
@@ -79,55 +89,31 @@
 
         .description {
             color: #aaa;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .features {
-            list-style: none;
-            margin-bottom: 30px;
-            text-align: left;
-        }
-
-        .features li {
             font-size: 0.9rem;
-            color: #ddd;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            flex-grow: 1; /* Faz os cards terem a mesma altura no grid */
         }
 
-        /* Ícone de check dourado simples feito com CSS */
-        .features li::before {
-            content: '✓';
-            color: #D4AF37;
-            font-weight: bold;
-            margin-right: 10px;
-            font-size: 1.2rem;
-        }
-
-        /* Botão de Pagamento */
+        /* Botões */
         .pay-btn {
             background: linear-gradient(135deg, #D4AF37 0%, #AA8529 100%);
             color: #000000;
             border: none;
             width: 100%;
-            padding: 16px;
-            font-size: 1.1rem;
+            padding: 15px;
+            font-size: 1rem;
             font-weight: 800;
             border-radius: 8px;
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
         }
 
         .pay-btn:hover {
             background: linear-gradient(135deg, #F3C943 0%, #C49A2F 100%);
             transform: scale(1.02);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
         }
 
         .payment-methods {
@@ -139,46 +125,83 @@
 </head>
 <body>
 
-    <div class="product-card">
-        <div class="badge">Acesso Imediato</div>
-        <h1 class="title">Assinatura Premium</h1>
-        
-        <div class="price">
-            R$ 25,00 <span>/mensal</span>
+    <div class="header">
+        <h1>Assinaturas Premium</h1>
+        <p>Acesso Imediato • Suporte 24h • Renovação Segura</p>
+    </div>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+            <h2 class="title">Netflix 4K</h2>
+            <div class="price">R$ 25,00 <span>/mês</span></div>
+            <p class="description">Resolução máxima Ultra HD. Perfeito para maratonar filmes, séries e animes originais sem interrupções e em múltiplas telas.</p>
+            <button class="pay-btn" onclick="pagarLink('https://invoice.infinitepay.io/plans/isaac-newton-004/FYx6kGjE4c', this)">Pagamento</button>
+            <div class="payment-methods">InfinitePay (Cartão/Boleto/Pix)</div>
         </div>
-        
-        <p class="description">
-            Tenha acesso completo e ininterrupto. O login e senha serão entregues automaticamente após a confirmação.
-        </p>
 
-        <ul class="features">
-            <li>Acesso instantâneo</li>
-            <li>Suporte prioritário</li>
-            <li>Renovação automática segura</li>
-        </ul>
-
-        <button class="pay-btn" id="btnPagamento">Pagamento</button>
-
-        <div class="payment-methods">
-            Aceitamos Cartão, Pix e Boleto
+        <div class="product-card">
+            <h2 class="title">Prime Video</h2>
+            <div class="price">R$ 14,90 <span>/mês</span></div>
+            <p class="description">Plano 100% sem anúncios. Acesso ao catálogo gigante de séries e produções originais da Amazon com máxima estabilidade.</p>
+            <button class="pay-btn" onclick="pagarLink('https://invoice.infinitepay.io/plans/isaac-newton-004/XPhSZdU0th', this)">Pagamento</button>
+            <div class="payment-methods">InfinitePay (Cartão/Boleto/Pix)</div>
         </div>
+
+        <div class="product-card">
+            <h2 class="title">YouTube Premium</h2>
+            <div class="price">R$ 13,99 <span>/mês</span></div>
+            <p class="description">Vídeos e músicas sem propagandas. Reproduza em segundo plano e faça downloads para assistir tudo offline.</p>
+            <button class="pay-btn" onclick="pagarLink('https://invoice.infinitepay.io/plans/isaac-newton-004/i2HBkkM24L', this)">Pagamento</button>
+            <div class="payment-methods">InfinitePay (Cartão/Boleto/Pix)</div>
+        </div>
+
+        <div class="product-card">
+            <h2 class="title">CapCut Pro</h2>
+            <div class="price">R$ 10,00 <span>/mês</span></div>
+            <p class="description">Ferramenta Pro liberada: transições exclusivas, remoção de fundo e inteligência artificial para suas edições ficarem impecáveis.</p>
+            <button class="pay-btn" onclick="pagarPix('00020101021226720014BR.GOV.BCB.PIX0124isaac-newton-004@jim.com0222Pagamento isaac-newton520400005303986540510.005802BR5924ISAAC NEWTON GOMES PINTO6009PARAIPABA62290525QRCC9wDIrF72dIRa1iVecR3ob6304B9AC', this)">Copiar Pix Automático</button>
+            <div class="payment-methods">Exclusivo via Pix</div>
+        </div>
+
+        <div class="product-card">
+            <h2 class="title">Canva Pro</h2>
+            <div class="price">R$ 10,00 <span>/mês</span></div>
+            <p class="description">Templates premium e imagens infinitas. Desbloqueie todas as ferramentas de criação e eleve a qualidade visual dos seus projetos.</p>
+            <button class="pay-btn" onclick="pagarPix('00020101021226720014BR.GOV.BCB.PIX0124isaac-newton-004@jim.com0222Pagamento isaac-newton520400005303986540510.005802BR5924ISAAC NEWTON GOMES PINTO6009PARAIPABA62290525QRCC9wDIrF72dIRa1iVecR3ob6304B9AC', this)">Copiar Pix Automático</button>
+            <div class="payment-methods">Exclusivo via Pix</div>
+        </div>
+
     </div>
 
     <script>
-        // Lógica de redirecionamento para a InfinitePay
-        document.getElementById('btnPagamento').addEventListener('click', function() {
-            // O botão muda de texto para mostrar que está carregando
-            this.innerText = "Processando...";
-            this.style.opacity = "0.8";
-
-            // Link da sua fatura InfinitePay
-            const linkCheckout = "https://invoice.infinitepay.io/plans/isaac-newton-004/FYx6kGjE4c";
-            
-            // Redireciona o usuário após um breve delay (dá uma sensação de carregamento do sistema)
+        // Função para os links da InfinitePay
+        function pagarLink(url, botao) {
+            botao.innerText = "Carregando...";
+            botao.style.opacity = "0.8";
             setTimeout(() => {
-                window.location.href = linkCheckout;
+                window.location.href = url;
             }, 500);
-        });
+        }
+
+        // Função para Copiar o Código Pix
+        function pagarPix(codigoPix, botao) {
+            // Copia o código para a área de transferência do celular/PC
+            navigator.clipboard.writeText(codigoPix).then(() => {
+                botao.innerText = "Pix Copiado! Cole no App do Banco";
+                botao.style.background = "#4CAF50"; // Fica verde para confirmar
+                botao.style.color = "#fff";
+                
+                // Volta ao normal depois de 4 segundos
+                setTimeout(() => {
+                    botao.innerText = "Copiar Pix Automático";
+                    botao.style.background = "linear-gradient(135deg, #D4AF37 0%, #AA8529 100%)";
+                    botao.style.color = "#000000";
+                }, 4000);
+            }).catch(err => {
+                alert("Erro ao copiar. Tente novamente.");
+            });
+        }
     </script>
 
 </body>
