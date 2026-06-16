@@ -10,13 +10,13 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
         body { background-color: #050505; color: #ffffff; padding: 20px 10px; min-height: 100vh; display: flex; flex-direction: column; }
         
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { font-size: 1.8rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; }
+        .header { text-align: center; margin-bottom: 20px; }
+        .header h1 { font-size: 1.6rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; }
         
-        .verified-badge { background-color: #D4AF37; color: #000; font-size: 0.8rem; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-left: 8px; font-weight: 900; }
-        .header p { color: #aaa; margin-top: 5px; font-size: 0.8rem; }
+        .verified-badge { background-color: #D4AF37; color: #000; font-size: 0.7rem; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-left: 8px; font-weight: 900; }
+        .header p { color: #aaa; margin-top: 5px; font-size: 0.7rem; }
         
-        /* Grid lado a lado */
+        /* Layout forçado em 2 colunas */
         .products-grid { 
             display: grid; 
             grid-template-columns: repeat(2, 1fr); 
@@ -26,24 +26,16 @@
             flex-grow: 1;
         }
         
-        .product-card { background-color: #121212; border-radius: 12px; padding: 12px; text-align: center; border: 1px solid #2a2a2a; display: flex; flex-direction: column; justify-content: space-between; }
+        .product-card { background-color: #121212; border-radius: 8px; padding: 10px; text-align: center; border: 1px solid #2a2a2a; display: flex; flex-direction: column; justify-content: space-between; }
         
-        .title { font-size: 0.85rem; font-weight: 800; margin-bottom: 5px; color: #fff; }
-        .price { font-size: 0.95rem; font-weight: 800; color: #D4AF37; margin-bottom: 8px; }
-        .description { color: #aaa; font-size: 0.6rem; margin-bottom: 10px; line-height: 1.3; }
+        .title { font-size: 0.8rem; font-weight: 800; margin-bottom: 4px; color: #fff; }
+        .price { font-size: 0.9rem; font-weight: 800; color: #D4AF37; margin-bottom: 6px; }
+        .description { color: #aaa; font-size: 0.55rem; margin-bottom: 8px; line-height: 1.2; }
         
-        .pay-btn { background: linear-gradient(135deg, #D4AF37 0%, #AA8529 100%); color: #000; border: none; width: 100%; padding: 8px; font-weight: 800; border-radius: 4px; cursor: pointer; font-size: 0.65rem; margin-bottom: 5px; text-transform: uppercase; }
-        .whatsapp-btn { background: #25d366; color: #fff; width: 100%; padding: 6px; border-radius: 4px; text-decoration: none; display: block; font-weight: 600; font-size: 0.6rem; }
+        .pay-btn { background: linear-gradient(135deg, #D4AF37 0%, #AA8529 100%); color: #000; border: none; width: 100%; padding: 6px; font-weight: 800; border-radius: 4px; cursor: pointer; font-size: 0.6rem; margin-bottom: 4px; text-transform: uppercase; }
+        .whatsapp-btn { background: #25d366; color: #fff; width: 100%; padding: 5px; border-radius: 4px; text-decoration: none; display: block; font-weight: 600; font-size: 0.6rem; }
 
-        /* Estilo do Rodapé */
-        footer {
-            text-align: center;
-            color: #444;
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 0.7rem;
-            border-top: 1px solid #1a1a1a;
-        }
+        footer { text-align: center; color: #444; margin-top: 30px; padding: 10px; font-size: 0.65rem; border-top: 1px solid #1a1a1a; }
     </style>
 </head>
 <body>
