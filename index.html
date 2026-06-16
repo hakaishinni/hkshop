@@ -41,14 +41,14 @@
         .product-card { background-color: #121212; border-radius: 12px; padding: 12px; text-align: center; border: 1px solid #2a2a2a; display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s ease; }
         .product-card:hover { border-color: #D4AF37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
         
-        /* NOVA CLASSE PARA AS IMAGENS QUADRADAS */
+        /* IMAGEM COM O AJUSTE PARA CABER INTEIRA (CONTAIN) */
         .product-image {
             width: 100%;
-            aspect-ratio: 1 / 1; /* Força o formato perfeitamente quadrado */
-            object-fit: cover; /* Faz a imagem preencher o espaço sem amassar */
+            aspect-ratio: 1 / 1; 
+            object-fit: contain; 
             border-radius: 8px;
             margin-bottom: 12px;
-            background-color: #1a1a1a; /* Fundo escuro enquanto a imagem carrega */
+            background-color: #1a1a1a; 
         }
         
         .title { font-size: 0.85rem; font-weight: 800; margin-bottom: 5px; color: #ffffff; }
@@ -87,7 +87,6 @@
     <div class="products-grid fade-in delay-2">
         
         <div class="product-card">
-            <!-- Imagem adicionada aqui -->
             <img src="netflix.png" alt="Capa Netflix" class="product-image">
             <h2 class="title">Netflix 4K / Tela Privada ✅</h2>
             <div class="price">R$ 25,00</div>
@@ -97,7 +96,6 @@
         </div>
 
         <div class="product-card">
-            <!-- Imagem adicionada aqui -->
             <img src="prime.png" alt="Capa Prime Video" class="product-image">
             <h2 class="title">Prime Vídeo / Tela Privada ✅</h2>
             <div class="price">R$ 14,90</div>
@@ -107,7 +105,6 @@
         </div>
 
         <div class="product-card">
-            <!-- Imagem adicionada aqui -->
             <img src="youtube.png" alt="Capa YouTube" class="product-image">
             <h2 class="title">YouTube Premium</h2>
             <div class="price">R$ 13,99</div>
@@ -117,7 +114,6 @@
         </div>
 
         <div class="product-card">
-            <!-- Imagem adicionada aqui -->
             <img src="capcut.png" alt="Capa CapCut" class="product-image">
             <h2 class="title">CapCut Pro / Privado ✅</h2>
             <div class="price">R$ 10,00</div>
@@ -127,7 +123,6 @@
         </div>
 
         <div class="product-card">
-            <!-- Imagem adicionada aqui -->
             <img src="canva.png" alt="Capa Canva" class="product-image">
             <h2 class="title">Canva Pro / Privado ✅</h2>
             <div class="price">R$ 10,00</div>
