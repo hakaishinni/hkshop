@@ -3,43 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Premium | Assinaturas</title>
+    <title>HK SHOP | Assinaturas</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
         body { background-color: #050505; color: #ffffff; padding: 20px 10px; }
-        
         .header { text-align: center; margin-bottom: 30px; }
         .header h1 { font-size: 1.8rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; }
+        .verified-badge { background-color: #D4AF37; color: #000; font-size: 0.7rem; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-left: 8px; font-weight: 900; }
         
-        /* Estilo do Selo Dourado */
-        .verified-badge {
-            background-color: #D4AF37;
-            color: #000;
-            font-size: 0.8rem;
-            width: 22px;
-            height: 22px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-left: 8px;
-            font-weight: 900;
-        }
+        .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; max-width: 1100px; margin: 0 auto; }
+        .product-card { background-color: #121212; border-radius: 12px; padding: 10px; text-align: center; border: 1px solid #2a2a2a; }
         
-        .header p { color: #aaa; margin-top: 5px; font-size: 0.8rem; }
-        
-        /* Grid lado a lado */
-        .products-grid { 
-            display: grid; 
-            grid-template-columns: repeat(2, 1fr); 
-            gap: 10px; 
-            max-width: 1100px; 
-            margin: 0 auto; 
-        }
-        
-        .product-card { background-color: #121212; border-radius: 12px; padding: 12px; text-align: center; border: 1px solid #2a2a2a; display: flex; flex-direction: column; justify-content: space-between; }
+        /* Ajuste da imagem */
+        .product-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px; }
         
         .title { font-size: 0.85rem; font-weight: 800; margin-bottom: 5px; color: #fff; }
         .price { font-size: 0.95rem; font-weight: 800; color: #D4AF37; margin-bottom: 8px; }
@@ -52,55 +30,56 @@
 <body>
 
     <div class="header">
-        <h1>LOJA PREMIUM <span class="verified-badge">✓</span></h1>
-        <p>Acesso Imediato • Suporte 24h • Renovação Segura</p>
+        <h1>HK SHOP <span class="verified-badge">✓</span></h1>
+        <p>Acesso Imediato • Suporte 24h</p>
     </div>
 
     <div class="products-grid">
         
         <!-- Netflix -->
         <div class="product-card">
+            <img src="1778094808983.png" class="product-img" alt="Netflix Premium">
             <h2 class="title">Netflix 4K</h2>
             <div class="price">R$ 25,00</div>
-            <p class="description">Resolução 4K Ultra HD. Ideal para maratonar séries e filmes sem interrupções.</p>
             <button class="pay-btn" onclick="window.location.href='https://invoice.infinitepay.io/plans/isaac-newton-004/FYx6kGjE4c'">Pagar Cartão/Pix</button>
-            <a href="https://wa.me/5585996283171?text=Olá, paguei a Netflix 4K. Segue meu comprovante:" class="whatsapp-btn">Enviar Comprovante (WhatsApp)</a>
+            <a href="https://wa.me/5585996283171?text=Olá, paguei a Netflix 4K." class="whatsapp-btn">Comprovante</a>
         </div>
 
         <!-- Prime Video -->
         <div class="product-card">
+            <!-- (Usando a imagem do Canva temporariamente se não tiver a do Prime) -->
+            <img src="1776352124204.png" class="product-img" alt="Prime Video">
             <h2 class="title">Prime Video</h2>
             <div class="price">R$ 14,90</div>
-            <p class="description">Plano premium sem anúncios. Tenha acesso a todo catálogo Amazon com estabilidade.</p>
             <button class="pay-btn" onclick="window.location.href='https://invoice.infinitepay.io/plans/isaac-newton-004/s7nm9ly4L7'">Pagar Cartão/Pix</button>
-            <a href="https://wa.me/5585996283171?text=Olá, paguei o Prime Video. Segue meu comprovante:" class="whatsapp-btn">Enviar Comprovante (WhatsApp)</a>
+            <a href="https://wa.me/5585996283171?text=Olá, paguei o Prime Video." class="whatsapp-btn">Comprovante</a>
         </div>
 
         <!-- YouTube Premium -->
         <div class="product-card">
+            <img src="1777158537672.png" class="product-img" alt="YouTube Premium">
             <h2 class="title">YouTube</h2>
             <div class="price">R$ 13,99</div>
-            <p class="description">Vídeos sem anúncios, reprodução em segundo plano e acesso ao YouTube Music completo.</p>
             <button class="pay-btn" onclick="window.location.href='https://invoice.infinitepay.io/plans/isaac-newton-004/i2HBkkM24L'">Pagar Cartão/Pix</button>
-            <a href="https://wa.me/5585996283171?text=Olá, paguei o YouTube Premium. Segue meu comprovante:" class="whatsapp-btn">Enviar Comprovante (WhatsApp)</a>
+            <a href="https://wa.me/5585996283171?text=Olá, paguei o YouTube Premium." class="whatsapp-btn">Comprovante</a>
         </div>
 
         <!-- CapCut Pro -->
         <div class="product-card">
+            <img src="1776320210505.png" class="product-img" alt="CapCut Pro">
             <h2 class="title">CapCut Pro</h2>
             <div class="price">R$ 10,00</div>
-            <p class="description">Ferramenta Pro: transições exclusivas, remoção de fundo e IA avançada para edições.</p>
             <button class="pay-btn" onclick="copiarPix(this, '00020101021226720014BR.GOV.BCB.PIX0124isaac-newton-004@jim.com0222Pagamento isaac-newton520400005303986540510.005802BR5924ISAAC NEWTON GOMES PINTO6009PARAIPABA62290525QRCC9wDIrF72dIRa1iVecR3ob6304B9AC')">Copiar Pix</button>
-            <a href="https://wa.me/5585996283171?text=Olá, realizei o PIX do CapCut Pro. Segue meu comprovante:" class="whatsapp-btn">Enviar Comprovante (WhatsApp)</a>
+            <a href="https://wa.me/5585996283171?text=Olá, realizei o PIX do CapCut Pro." class="whatsapp-btn">Comprovante</a>
         </div>
 
         <!-- Canva Pro -->
         <div class="product-card">
+            <img src="1776352124204.png" class="product-img" alt="Canva Pro">
             <h2 class="title">Canva Pro</h2>
             <div class="price">R$ 10,00</div>
-            <p class="description">Acesso completo a templates, imagens infinitas e ferramentas de IA para design profissional.</p>
             <button class="pay-btn" onclick="copiarPix(this, '00020101021226720014BR.GOV.BCB.PIX0124isaac-newton-004@jim.com0222Pagamento isaac-newton520400005303986540510.005802BR5924ISAAC NEWTON GOMES PINTO6009PARAIPABA62290525QRCC9wDIrF72dIRa1iVecR3ob6304B9AC')">Copiar Pix</button>
-            <a href="https://wa.me/5585996283171?text=Olá, realizei o PIX do Canva Pro. Segue meu comprovante:" class="whatsapp-btn">Enviar Comprovante (WhatsApp)</a>
+            <a href="https://wa.me/5585996283171?text=Olá, realizei o PIX do Canva Pro." class="whatsapp-btn">Comprovante</a>
         </div>
 
     </div>
