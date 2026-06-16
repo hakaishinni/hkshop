@@ -13,7 +13,6 @@
         .header { text-align: center; margin-bottom: 30px; }
         .header h1 { font-size: 1.8rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; }
         
-        /* Estilo do Selo Dourado com animação flutuante */
         .verified-badge {
             background-color: #D4AF37;
             color: #000;
@@ -31,7 +30,6 @@
         
         .header p { color: #aaa; margin-top: 5px; font-size: 0.8rem; }
         
-        /* Grid lado a lado original intacto */
         .products-grid { 
             display: grid; 
             grid-template-columns: repeat(2, 1fr); 
@@ -41,8 +39,17 @@
         }
         
         .product-card { background-color: #121212; border-radius: 12px; padding: 12px; text-align: center; border: 1px solid #2a2a2a; display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s ease; }
-        
         .product-card:hover { border-color: #D4AF37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
+        
+        /* NOVA CLASSE PARA AS IMAGENS QUADRADAS */
+        .product-image {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Força o formato perfeitamente quadrado */
+            object-fit: cover; /* Faz a imagem preencher o espaço sem amassar */
+            border-radius: 8px;
+            margin-bottom: 12px;
+            background-color: #1a1a1a; /* Fundo escuro enquanto a imagem carrega */
+        }
         
         .title { font-size: 0.85rem; font-weight: 800; margin-bottom: 5px; color: #ffffff; }
         .price { font-size: 0.95rem; font-weight: 800; color: #D4AF37; margin-bottom: 8px; }
@@ -51,63 +58,23 @@
         .pay-btn { background: linear-gradient(135deg, #D4AF37 0%, #AA8529 100%); color: #000; border: none; width: 100%; padding: 8px; font-weight: 800; border-radius: 4px; cursor: pointer; font-size: 0.65rem; margin-bottom: 5px; text-transform: uppercase; }
         .whatsapp-btn { background: #25d366; color: #fff; width: 100%; padding: 6px; border-radius: 4px; text-decoration: none; display: block; font-weight: 600; font-size: 0.6rem; }
 
-        /* ======== NOVAS ADIÇÕES: AVALIAÇÕES ======== */
-        .reviews-section {
-            max-width: 600px;
-            margin: 40px auto 10px auto;
-            width: 100%;
-        }
-        .reviews-title {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #D4AF37;
-            margin-bottom: 15px;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-        .reviews-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .review-card {
-            background-color: #121212;
-            border-radius: 10px;
-            padding: 15px;
-            border: 1px solid #2a2a2a;
-            text-align: left;
-        }
+        .reviews-section { max-width: 600px; margin: 40px auto 10px auto; width: 100%; }
+        .reviews-title { text-align: center; font-size: 1.2rem; color: #D4AF37; margin-bottom: 15px; font-weight: 800; text-transform: uppercase; }
+        .reviews-list { display: flex; flex-direction: column; gap: 12px; }
+        .review-card { background-color: #121212; border-radius: 10px; padding: 15px; border: 1px solid #2a2a2a; text-align: left; }
         .review-stars { color: #D4AF37; font-size: 0.9rem; margin-bottom: 5px; letter-spacing: 2px; }
         .review-name { font-weight: 800; color: #fff; font-size: 0.8rem; margin-bottom: 4px; }
         .review-text { color: #aaa; font-size: 0.65rem; line-height: 1.4; }
 
-        /* ======== NOVAS ADIÇÕES: ANIMAÇÕES ======== */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes floatSelo {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-4px); }
-            100% { transform: translateY(0px); }
-        }
-        .fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-            opacity: 0; /* Começa invisível para a animação funcionar */
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes floatSelo { 0% { transform: translateY(0px); } 50% { transform: translateY(-4px); } 100% { transform: translateY(0px); } }
+        
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
         .delay-1 { animation-delay: 0.1s; }
         .delay-2 { animation-delay: 0.3s; }
         .delay-3 { animation-delay: 0.5s; }
 
-        /* Rodapé original intacto */
-        footer {
-            text-align: center;
-            color: #ffffff;
-            margin-top: 40px;
-            padding: 15px 0;
-            font-size: 0.7rem;
-            border-top: 1px solid #1a1a1a;
-        }
+        footer { text-align: center; color: #ffffff; margin-top: 40px; padding: 15px 0; font-size: 0.7rem; border-top: 1px solid #1a1a1a; }
     </style>
 </head>
 <body>
@@ -120,6 +87,8 @@
     <div class="products-grid fade-in delay-2">
         
         <div class="product-card">
+            <!-- Imagem adicionada aqui -->
+            <img src="netflix.png" alt="Capa Netflix" class="product-image">
             <h2 class="title">Netflix 4K / Tela Privada ✅</h2>
             <div class="price">R$ 25,00</div>
             <p class="description">Resolução 4K Ultra HD. Ideal para maratonar séries e filmes sem interrupções.</p>
@@ -128,6 +97,8 @@
         </div>
 
         <div class="product-card">
+            <!-- Imagem adicionada aqui -->
+            <img src="prime.png" alt="Capa Prime Video" class="product-image">
             <h2 class="title">Prime Vídeo / Tela Privada ✅</h2>
             <div class="price">R$ 14,90</div>
             <p class="description">Plano premium sem anúncios. Tenha acesso a todo catálogo Amazon com estabilidade.</p>
@@ -136,6 +107,8 @@
         </div>
 
         <div class="product-card">
+            <!-- Imagem adicionada aqui -->
+            <img src="youtube.png" alt="Capa YouTube" class="product-image">
             <h2 class="title">YouTube Premium</h2>
             <div class="price">R$ 13,99</div>
             <p class="description">Vídeos sem anúncios, reprodução em segundo plano e acesso ao YouTube Music completo.</p>
@@ -144,6 +117,8 @@
         </div>
 
         <div class="product-card">
+            <!-- Imagem adicionada aqui -->
+            <img src="capcut.png" alt="Capa CapCut" class="product-image">
             <h2 class="title">CapCut Pro / Privado ✅</h2>
             <div class="price">R$ 10,00</div>
             <p class="description">Ferramenta Pro: transições exclusivas, remoção de fundo e IA avançada para edições.</p>
@@ -152,6 +127,8 @@
         </div>
 
         <div class="product-card">
+            <!-- Imagem adicionada aqui -->
+            <img src="canva.png" alt="Capa Canva" class="product-image">
             <h2 class="title">Canva Pro / Privado ✅</h2>
             <div class="price">R$ 10,00</div>
             <p class="description">Acesso completo a templates, imagens infinitas e ferramentas de IA para design profissional.</p>
@@ -164,25 +141,21 @@
     <div class="reviews-section fade-in delay-3">
         <h2 class="reviews-title">★ Avaliações ★</h2>
         <div class="reviews-list">
-            
             <div class="review-card">
                 <div class="review-stars">★★★★★</div>
                 <div class="review-name">Lucas M.</div>
                 <div class="review-text">"Muito rápido! Comprei a Netflix e me enviaram o acesso no WhatsApp em menos de 5 minutos. Funciona perfeitamente."</div>
             </div>
-
             <div class="review-card">
                 <div class="review-stars">★★★★★</div>
                 <div class="review-name">Mariana S.</div>
                 <div class="review-text">"Uso o Canva Pro para minha loja e o preço da HK Shop é imbatível. Recomendo demais o serviço deles."</div>
             </div>
-
             <div class="review-card">
                 <div class="review-stars">★★★★★</div>
                 <div class="review-name">Gabriel T.</div>
                 <div class="review-text">"O melhor do mercado sem dúvidas, atendimento nota 10, sempre respondem rápido quando preciso tirar dúvidas."</div>
             </div>
-
         </div>
     </div>
 
