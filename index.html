@@ -13,23 +13,23 @@
         .header h1 { font-size: 1.8rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; }
         .header p { color: #aaa; margin-top: 5px; font-size: 0.8rem; }
         
-        /* Ajuste do Grid para telas mobile (lado a lado) */
+        /* Grid lado a lado (2 colunas no celular) */
         .products-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
-            gap: 15px; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 10px; 
             max-width: 1100px; 
             margin: 0 auto; 
         }
         
-        .product-card { background-color: #121212; border-radius: 12px; padding: 15px; text-align: center; border: 1px solid #2a2a2a; }
+        .product-card { background-color: #121212; border-radius: 12px; padding: 12px; text-align: center; border: 1px solid #2a2a2a; display: flex; flex-direction: column; justify-content: space-between; }
         
-        .title { font-size: 0.9rem; font-weight: 800; margin-bottom: 8px; color: #fff; }
-        .price { font-size: 1.1rem; font-weight: 800; color: #D4AF37; margin-bottom: 10px; }
-        .description { color: #aaa; font-size: 0.75rem; margin-bottom: 15px; line-height: 1.4; display: none; } /* Oculto em mobile para economizar espaço */
+        .title { font-size: 0.9rem; font-weight: 800; margin-bottom: 5px; color: #fff; }
+        .price { font-size: 1.0rem; font-weight: 800; color: #D4AF37; margin-bottom: 8px; }
+        .description { color: #aaa; font-size: 0.65rem; margin-bottom: 10px; line-height: 1.3; overflow: hidden; }
         
-        .pay-btn { background: linear-gradient(135deg, #D4AF37 0%, #AA8529 100%); color: #000; border: none; width: 100%; padding: 10px; font-weight: 800; border-radius: 6px; cursor: pointer; font-size: 0.75rem; margin-bottom: 8px; }
-        .whatsapp-btn { background: #25d366; color: #fff; width: 100%; padding: 8px; border-radius: 6px; text-decoration: none; display: block; font-weight: 600; font-size: 0.7rem; }
+        .pay-btn { background: linear-gradient(135deg, #D4AF37 0%, #AA8529 100%); color: #000; border: none; width: 100%; padding: 8px; font-weight: 800; border-radius: 4px; cursor: pointer; font-size: 0.7rem; margin-bottom: 5px; text-transform: uppercase; }
+        .whatsapp-btn { background: #25d366; color: #fff; width: 100%; padding: 6px; border-radius: 4px; text-decoration: none; display: block; font-weight: 600; font-size: 0.65rem; }
     </style>
 </head>
 <body>
@@ -45,40 +45,45 @@
         <div class="product-card">
             <h2 class="title">Netflix 4K</h2>
             <div class="price">R$ 25,00</div>
+            <p class="description">Resolução 4K Ultra HD. Ideal para maratonar séries e filmes sem interrupções em múltiplas telas.</p>
             <button class="pay-btn" onclick="window.location.href='https://invoice.infinitepay.io/plans/isaac-newton-004/FYx6kGjE4c'">Pagar Cartão/Pix</button>
-            <a href="https://wa.me/5585996283171?text=Olá, paguei a Netflix 4K." class="whatsapp-btn">Comprovante</a>
+            <a href="https://wa.me/5585996283171?text=Olá, paguei a Netflix 4K. Segue meu comprovante:" class="whatsapp-btn">Comprovante</a>
         </div>
 
         <!-- Prime Video -->
         <div class="product-card">
             <h2 class="title">Prime Video</h2>
             <div class="price">R$ 14,90</div>
+            <p class="description">Plano premium sem anúncios. Tenha acesso a todo catálogo Amazon com máxima estabilidade.</p>
             <button class="pay-btn" onclick="window.location.href='https://invoice.infinitepay.io/plans/isaac-newton-004/s7nm9ly4L7'">Pagar Cartão/Pix</button>
-            <a href="https://wa.me/5585996283171?text=Olá, paguei o Prime Video." class="whatsapp-btn">Comprovante</a>
+            <a href="https://wa.me/5585996283171?text=Olá, paguei o Prime Video. Segue meu comprovante:" class="whatsapp-btn">Comprovante</a>
         </div>
 
         <!-- YouTube Premium -->
         <div class="product-card">
             <h2 class="title">YouTube</h2>
             <div class="price">R$ 13,99</div>
+            <p class="description">Vídeos sem anúncios, reprodução em segundo plano e acesso ao YouTube Music completo.</p>
             <button class="pay-btn" onclick="window.location.href='https://invoice.infinitepay.io/plans/isaac-newton-004/i2HBkkM24L'">Pagar Cartão/Pix</button>
-            <a href="https://wa.me/5585996283171?text=Olá, paguei o YouTube Premium." class="whatsapp-btn">Comprovante</a>
+            <a href="https://wa.me/5585996283171?text=Olá, paguei o YouTube Premium. Segue meu comprovante:" class="whatsapp-btn">Comprovante</a>
         </div>
 
         <!-- CapCut Pro -->
         <div class="product-card">
             <h2 class="title">CapCut Pro</h2>
             <div class="price">R$ 10,00</div>
+            <p class="description">Ferramenta Pro: transições exclusivas, remoção de fundo e IA avançada para edições de vídeo.</p>
             <button class="pay-btn" onclick="copiarPix(this, '00020101021226720014BR.GOV.BCB.PIX0124isaac-newton-004@jim.com0222Pagamento isaac-newton520400005303986540510.005802BR5924ISAAC NEWTON GOMES PINTO6009PARAIPABA62290525QRCC9wDIrF72dIRa1iVecR3ob6304B9AC')">Copiar Pix</button>
-            <a href="https://wa.me/5585996283171?text=Olá, realizei o PIX do CapCut Pro." class="whatsapp-btn">Comprovante</a>
+            <a href="https://wa.me/5585996283171?text=Olá, realizei o PIX do CapCut Pro. Segue meu comprovante:" class="whatsapp-btn">Comprovante</a>
         </div>
 
         <!-- Canva Pro -->
         <div class="product-card">
             <h2 class="title">Canva Pro</h2>
             <div class="price">R$ 10,00</div>
+            <p class="description">Acesso completo a templates, imagens infinitas e ferramentas de IA para design profissional.</p>
             <button class="pay-btn" onclick="copiarPix(this, '00020101021226720014BR.GOV.BCB.PIX0124isaac-newton-004@jim.com0222Pagamento isaac-newton520400005303986540510.005802BR5924ISAAC NEWTON GOMES PINTO6009PARAIPABA62290525QRCC9wDIrF72dIRa1iVecR3ob6304B9AC')">Copiar Pix</button>
-            <a href="https://wa.me/5585996283171?text=Olá, realizei o PIX do Canva Pro." class="whatsapp-btn">Comprovante</a>
+            <a href="https://wa.me/5585996283171?text=Olá, realizei o PIX do Canva Pro. Segue meu comprovante:" class="whatsapp-btn">Comprovante</a>
         </div>
 
     </div>
@@ -86,7 +91,7 @@
     <script>
         function copiarPix(btn, codigo) {
             navigator.clipboard.writeText(codigo);
-            btn.innerText = "Pix Copiado!";
+            btn.innerText = "Copiado!";
             setTimeout(() => btn.innerText = "Copiar Pix", 3000);
         }
     </script>
