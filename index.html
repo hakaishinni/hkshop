@@ -9,11 +9,28 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
         body { background-color: #050505; color: #ffffff; padding: 20px 10px; }
+        
         .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { font-size: 1.8rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; }
+        .header h1 { font-size: 1.8rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; }
+        
+        /* Estilo do Selo Dourado */
+        .verified-badge {
+            background-color: #D4AF37;
+            color: #000;
+            font-size: 0.8rem;
+            width: 22px;
+            height: 22px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 8px;
+            font-weight: 900;
+        }
+        
         .header p { color: #aaa; margin-top: 5px; font-size: 0.8rem; }
         
-        /* Grid lado a lado (2 colunas) */
+        /* Grid lado a lado */
         .products-grid { 
             display: grid; 
             grid-template-columns: repeat(2, 1fr); 
@@ -35,7 +52,7 @@
 <body>
 
     <div class="header">
-        <h1>LOJA PREMIUM</h1>
+        <h1>LOJA PREMIUM <span class="verified-badge">✓</span></h1>
         <p>Acesso Imediato • Suporte 24h • Renovação Segura</p>
     </div>
 
@@ -45,7 +62,7 @@
         <div class="product-card">
             <h2 class="title">Netflix 4K</h2>
             <div class="price">R$ 25,00</div>
-            <p class="description">Resolução 4K Ultra HD. Ideal para maratonar séries e filmes sem interrupções em múltiplas telas.</p>
+            <p class="description">Resolução 4K Ultra HD. Ideal para maratonar séries e filmes sem interrupções.</p>
             <button class="pay-btn" onclick="window.location.href='https://invoice.infinitepay.io/plans/isaac-newton-004/FYx6kGjE4c'">Pagar Cartão/Pix</button>
             <a href="https://wa.me/5585996283171?text=Olá, paguei a Netflix 4K. Segue meu comprovante:" class="whatsapp-btn">Enviar Comprovante (WhatsApp)</a>
         </div>
@@ -54,7 +71,7 @@
         <div class="product-card">
             <h2 class="title">Prime Video</h2>
             <div class="price">R$ 14,90</div>
-            <p class="description">Plano premium sem anúncios. Tenha acesso a todo catálogo Amazon com máxima estabilidade.</p>
+            <p class="description">Plano premium sem anúncios. Tenha acesso a todo catálogo Amazon com estabilidade.</p>
             <button class="pay-btn" onclick="window.location.href='https://invoice.infinitepay.io/plans/isaac-newton-004/s7nm9ly4L7'">Pagar Cartão/Pix</button>
             <a href="https://wa.me/5585996283171?text=Olá, paguei o Prime Video. Segue meu comprovante:" class="whatsapp-btn">Enviar Comprovante (WhatsApp)</a>
         </div>
@@ -72,7 +89,7 @@
         <div class="product-card">
             <h2 class="title">CapCut Pro</h2>
             <div class="price">R$ 10,00</div>
-            <p class="description">Ferramenta Pro: transições exclusivas, remoção de fundo e IA avançada para edições de vídeo.</p>
+            <p class="description">Ferramenta Pro: transições exclusivas, remoção de fundo e IA avançada para edições.</p>
             <button class="pay-btn" onclick="copiarPix(this, '00020101021226720014BR.GOV.BCB.PIX0124isaac-newton-004@jim.com0222Pagamento isaac-newton520400005303986540510.005802BR5924ISAAC NEWTON GOMES PINTO6009PARAIPABA62290525QRCC9wDIrF72dIRa1iVecR3ob6304B9AC')">Copiar Pix</button>
             <a href="https://wa.me/5585996283171?text=Olá, realizei o PIX do CapCut Pro. Segue meu comprovante:" class="whatsapp-btn">Enviar Comprovante (WhatsApp)</a>
         </div>
