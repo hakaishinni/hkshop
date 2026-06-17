@@ -10,6 +10,17 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
         body { background-color: #050505; color: #ffffff; padding: 20px 10px; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
         
+        /* ESTILO DA NOVA CAPA */
+        .hero-banner {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto 20px auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            border: 1px solid #2a2a2a;
+        }
+
         .header { text-align: center; margin-bottom: 30px; }
         .header h1 { font-size: 1.8rem; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; }
         
@@ -41,7 +52,6 @@
         .product-card { background-color: #121212; border-radius: 12px; padding: 12px; text-align: center; border: 1px solid #2a2a2a; display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s ease; }
         .product-card:hover { border-color: #D4AF37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
         
-        /* IMAGEM COM O AJUSTE PARA CABER INTEIRA (CONTAIN) */
         .product-image {
             width: 100%;
             aspect-ratio: 1 / 1; 
@@ -70,6 +80,7 @@
         @keyframes floatSelo { 0% { transform: translateY(0px); } 50% { transform: translateY(-4px); } 100% { transform: translateY(0px); } }
         
         .fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+        .delay-0 { animation-delay: 0s; }
         .delay-1 { animation-delay: 0.1s; }
         .delay-2 { animation-delay: 0.3s; }
         .delay-3 { animation-delay: 0.5s; }
@@ -78,6 +89,9 @@
     </style>
 </head>
 <body>
+
+    <!-- NOVA CAPA ADICIONADA AQUI -->
+    <img src="capa.jpg" alt="Banner HK Shop" class="hero-banner fade-in delay-0">
 
     <div class="header fade-in delay-1">
         <h1>HK SHOP <span class="verified-badge">✓</span></h1>
